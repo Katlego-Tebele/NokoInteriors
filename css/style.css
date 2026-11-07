@@ -249,10 +249,10 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&h=1080&fit=crop');
+    background-image: url('../assets/images/HomePage.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 .hero-overlay {
@@ -658,7 +658,18 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url('../assets/images/Built-in Wardrobes.jpeg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
+}
+
+/* Desktop parallax effect */
+@media (min-width: 1024px) {
+    .cta {
+        background-attachment: fixed;
+    }
+    
+    .hero {
+        background-attachment: fixed;
+    }
 }
 
 .cta-overlay {
@@ -1040,6 +1051,17 @@ h1, h2, h3, h4, h5, h6 {
     
     .nav-hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(8px, -8px);
+    }
+    
+    /* Hero - Mobile fix */
+    .hero {
+        background-attachment: scroll;
+        background-size: cover;
+        min-height: 100vh;
+    }
+    
+    .hero-overlay {
+        background: linear-gradient(135deg, rgba(17, 17, 17, 0.9), rgba(34, 34, 34, 0.85));
     }
     
     /* Hero */
